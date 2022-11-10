@@ -55,7 +55,11 @@ function Addsession() {
                 userid:id,
                 topic:pop.topic
               }
-             await axios.put("https://zenclasseventmanagement.herokuapp.com/remove-session",obj)
+             await axios.put("https://zenclasseventmanagement.herokuapp.com/remove-session",obj,{
+              headers:{
+                "auth":window.localStorage.getItem("app-token")
+              }
+             })
           
             }
           } catch (error) {
