@@ -27,8 +27,8 @@ function Addsession() {
 
         try {
          setSpin(true)
-      
-          let batchStudents =await axios.get('https://zenclasseventmanagement.herokuapp.com/session-manage',{
+      console.log(e.target.value)
+          let batchStudents =await axios.get('http://zenclasseventmanagement.herokuapp.com/session-manage',{
             headers:{
              batch_id:e.target.value
             }

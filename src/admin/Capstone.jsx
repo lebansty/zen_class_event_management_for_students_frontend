@@ -12,6 +12,7 @@ function Capstone() {
       loadData()
     },[])
     let loadData =async()=>{
+    
 try {
   let studentData = await axios.get(`https://zenclasseventmanagement.herokuapp.com/studentdet/${param.userId}`,{
     headers:{
