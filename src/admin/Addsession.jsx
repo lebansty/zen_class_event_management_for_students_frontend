@@ -30,7 +30,13 @@ function Addsession() {
       let obj={
         batch_id:e.target.value
       }
-          let batchStudents =await axios.post('https://zenclasseventmanagement.herokuapp.com/getiing-adddata',obj)
+          let batchStudents =await axios.post('https://zenclasseventmanagement.herokuapp.com/getiing-adddata',obj,{
+           
+              headers:{
+                "auth":window.localStorage.getItem("app-token")
+              }
+            
+          })
           console.log(batchStudents)
           setId(batchStudents.data.id)
           
