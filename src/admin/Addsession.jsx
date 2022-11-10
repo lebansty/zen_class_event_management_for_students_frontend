@@ -28,10 +28,12 @@ function Addsession() {
         try {
          setSpin(true)
       console.log(e.target.value)
-      let obj={
-        batch_id:e.target.value
-      }
-          let batchStudents =await axios.post('http://zenclasseventmanagement.herokuapp.com/session-manage',obj)
+      
+          let batchStudents =await axios.post('http://zenclasseventmanagement.herokuapp.com/additional-sessiondata',{
+            headers:{
+             batch_id:e.target.value
+            }
+          })
           console.log(batchStudents)
           setId(batchStudents.data.id)
           
