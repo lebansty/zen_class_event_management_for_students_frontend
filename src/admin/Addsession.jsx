@@ -29,7 +29,7 @@ function Addsession() {
          setSpin(true)
       console.log(e.target.value)
       
-          let batchStudents =await axios.post('http://zenclasseventmanagement.herokuapp.com/additional-sessiondata',{
+          let batchStudents =await axios.post('https://zenclasseventmanagement.herokuapp.com/additional-sessiondata',{
             headers:{
              batch_id:e.target.value
             }
