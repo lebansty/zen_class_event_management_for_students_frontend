@@ -11,7 +11,7 @@ function Stucap() {
   },[])
   let loadData =async()=>{
 try {
-  let wCode = await axios.get('https://zenclasseventmanagement.herokuapp.com/capcode-get',{
+  let wCode = await axios.get('https://zenclass-event-management-for-students-backend.vercel.app/capcode-get',{
     headers:{
       userid:window.localStorage.getItem("userId")
     }

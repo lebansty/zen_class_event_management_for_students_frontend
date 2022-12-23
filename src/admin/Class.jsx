@@ -15,7 +15,7 @@ function Class() {
 let loadAdditional =async()=>{
 try {
     
-    let addSession = await axios.get('https://zenclasseventmanagement.herokuapp.com/additional-sessiondata',{
+    let addSession = await axios.get('https://zenclass-event-management-for-students-backend.vercel.app/additional-sessiondata',{
         headers:{
             batch_id:window.localStorage.getItem('batch_id')
         }

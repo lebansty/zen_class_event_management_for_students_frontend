@@ -12,7 +12,7 @@ function Student() {
   },[])
   let selectBatches = async()=>{
     try {
-    let data= await axios.get('https://zenclasseventmanagement.herokuapp.com/give-batches',{
+    let data= await axios.get('https://zenclass-event-management-for-students-backend.vercel.app/give-batches',{
       headers:{
         "auth":window.localStorage.getItem("app-token")
       }
@@ -29,7 +29,7 @@ function Student() {
       let obj={
         batchName:e.target.value
       }
-      let batchStudents =await axios.post('https://zenclasseventmanagement.herokuapp.com/students-batch',obj,{
+      let batchStudents =await axios.post('https://zenclass-event-management-for-students-backend.vercel.app/students-batch',obj,{
         headers:{
           "auth":window.localStorage.getItem("app-token")
         }

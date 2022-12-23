@@ -9,7 +9,7 @@ function Modules() {
   },[])
   let selectBatches = async()=>{
     try {
-    let data= await axios.get('https://zenclasseventmanagement.herokuapp.com/give-batches',{
+    let data= await axios.get('https://zenclass-event-management-for-students-backend.vercel.app/give-batches',{
       headers:{
         "auth":window.localStorage.getItem("app-token")
       }
@@ -39,7 +39,7 @@ return errors
     },
     onSubmit:async(values,{resetForm})=>{
 try {
-  let update = await axios.post('https://zenclasseventmanagement.herokuapp.com/session-update',values,{
+  let update = await axios.post('https://zenclass-event-management-for-students-backend.vercel.app/session-update',values,{
     headers:{
       "auth":window.localStorage.getItem("app-token")
     }
@@ -63,7 +63,7 @@ resetForm({values:''})
     },
     onSubmit:async(values,{resetForm})=>{
 try {
-  let addUpdate =await axios.post('https://zenclasseventmanagement.herokuapp.com/add-session',values,{
+  let addUpdate =await axios.post('https://zenclass-event-management-for-students-backend.vercel.app/add-session',values,{
     headers:{
       "auth":window.localStorage.getItem("app-token")
     }

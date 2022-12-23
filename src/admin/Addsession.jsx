@@ -13,7 +13,7 @@ function Addsession() {
       },[])
       let selectBatches = async()=>{
         try {
-        let data= await axios.get('https://zenclasseventmanagement.herokuapp.com/give-batches',{
+        let data= await axios.get('https://zenclass-event-management-for-students-backend.vercel.app/give-batches',{
           headers:{
             "auth":window.localStorage.getItem("app-token")
           }
@@ -30,7 +30,7 @@ function Addsession() {
       let obj={
         batch_id:e.target.value
       }
-          let batchStudents =await axios.post('https://zenclasseventmanagement.herokuapp.com/getiing-adddata',obj,{
+          let batchStudents =await axios.post('https://zenclass-event-management-for-students-backend.vercel.app/getiing-adddata',obj,{
            
               headers:{
                 "auth":window.localStorage.getItem("app-token")
@@ -55,7 +55,7 @@ function Addsession() {
                 userid:id,
                 topic:pop.topic
               }
-             await axios.put("https://zenclasseventmanagement.herokuapp.com/remove-session",obj,{
+             await axios.put("https://zenclass-event-management-for-students-backend.vercel.app/remove-session",obj,{
               headers:{
                 "auth":window.localStorage.getItem("app-token")
               }

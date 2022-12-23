@@ -14,7 +14,7 @@ function Capstone() {
     let loadData =async()=>{
     
 try {
-  let studentData = await axios.get(`https://zenclasseventmanagement.herokuapp.com/studentdet/${param.userId}`,{
+  let studentData = await axios.get(`https://zenclass-event-management-for-students-backend.vercel.app/studentdet/${param.userId}`,{
     headers:{
       "auth":window.localStorage.getItem("app-token")
     }
@@ -37,7 +37,7 @@ try {
       onSubmit:async(values,{resetForm})=>{
         try {
           console.log(values)
-          let data = await axios.post(`https://zenclasseventmanagement.herokuapp.com/assign-capstone/${param.userId}`,values,{
+          let data = await axios.post(`https://zenclass-event-management-for-students-backend.vercel.app/assign-capstone/${param.userId}`,values,{
             headers:{
               "auth":window.localStorage.getItem("app-token")
             }

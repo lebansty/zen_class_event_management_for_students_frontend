@@ -13,7 +13,7 @@ function Editcap() {
    
     let loadData =async()=>{
         try {
-            let data = await axios.get(`https://zenclasseventmanagement.herokuapp.com/cap-correction/${param.id}`)
+            let data = await axios.get(`https://zenclass-event-management-for-students-backend.vercel.app/cap-correction/${param.id}`)
             setWeb(data.data.data)
         } catch (error) {
             console.log(error)
@@ -28,7 +28,7 @@ try {
       userid:param.id,
       title:pop.title
     }
-   await axios.put("https://zenclasseventmanagement.herokuapp.com/remove-cap",obj,{
+   await axios.put("https://zenclass-event-management-for-students-backend.vercel.app/remove-cap",obj,{
     headers:{
       "auth":window.localStorage.getItem("app-token")
     }

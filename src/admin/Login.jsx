@@ -15,7 +15,7 @@ function Login() {
     },
     onSubmit:async(values)=>{
 try {
-  let loginReq = await axios.post("https://zenclasseventmanagement.herokuapp.com/login-verify",values)
+  let loginReq = await axios.post("https://zenclass-event-management-for-students-backend.vercel.app/login-verify",values)
   
   window.localStorage.setItem("app-token",loginReq.data.token)
   window.localStorage.setItem("admin-name",loginReq.data.name)

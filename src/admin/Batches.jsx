@@ -14,7 +14,7 @@ const [refresh,setRefresh] = useState(0)
 
 let selectBatches = async()=>{
   try {
-  let data= await axios.get('https://zenclasseventmanagement.herokuapp.com/give-batches',{
+  let data= await axios.get('https://zenclass-event-management-for-students-backend.vercel.app/give-batches',{
     headers:{
       "auth":window.localStorage.getItem("app-token")
     }
@@ -31,7 +31,7 @@ let formik = useFormik(({
     onSubmit:async(values,{resetForm})=>{
        
    try {
-   let disMsg = await axios.post("https://zenclasseventmanagement.herokuapp.com/create-collection",values,{
+   let disMsg = await axios.post("https://zenclass-event-management-for-students-backend.vercel.app/create-collection",values,{
     headers:{
       "auth":window.localStorage.getItem("app-token")
     }
@@ -56,7 +56,7 @@ let formik = useFormik(({
     },
     onSubmit: async (values,{resetForm})=>{
 try {
-  let studentEntry = await axios.post("https://zenclasseventmanagement.herokuapp.com/adding-students",values,{
+  let studentEntry = await axios.post("https://zenclass-event-management-for-students-backend.vercel.app/adding-students",values,{
     headers:{
       "auth":window.localStorage.getItem("app-token")
     }

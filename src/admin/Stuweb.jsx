@@ -13,7 +13,7 @@ function Stuweb() {
   },[])
   let loadData =async()=>{
 try {
-  let wCode = await axios.get('https://zenclasseventmanagement.herokuapp.com/webcode-get',{
+  let wCode = await axios.get('https://zenclass-event-management-for-students-backend.vercel.app/webcode-get',{
     headers:{
       userid:window.localStorage.getItem("userId")
     }
