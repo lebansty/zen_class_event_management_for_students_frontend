@@ -1,3 +1,3 @@
 # login credentials
-# `mail`:lebanstyv@gmail.com
+# `mail`:demo@gmail.com
 # `password`:hello123
